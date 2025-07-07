@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krayxce | Elite Web Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Sora:wght@600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(15,15,15,0.8);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.8em;
+      color: #00f2fe;
+      text-shadow: 0 0 10px #00f2fe99;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #aaa;
+      font-weight: 600;
+      position: relative;
+    }
+    nav a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #00f2fe;
+      transition: width 0.3s ease;
+    }
+    nav a:hover::after { width: 100%; }
+    nav a:hover { color: #fff; }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px 100px;
+      background: linear-gradient(to bottom right, #0a0a0a, #161616);
+    }
+    .hero h2 {
+      font-size: 3.5em;
+      color: #00f2fe;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px #00f2fe55;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: #ccc;
+    }
+    .button {
+      display: inline-block;
+      padding: 14px 32px;
+      background: linear-gradient(135deg, #00f2fe, #4facfe);
+      color: #000;
+      font-weight: bold;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 0 20px #00f2fe88;
+      transition: transform 0.3s ease;
+    }
+    .button:hover { transform: scale(1.05); }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .section-title {
+      font-size: 2.5em;
+      margin-bottom: 50px;
+      color: #00f2fe;
+      text-shadow: 0 0 12px #00f2fe55;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: translateY(-10px); }
+    .card h4 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .card p {
+      color: #bbb;
+    }
+
+    footer {
+      background: #111;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    a.contact-link {
+      color: #00f2fe;
+      text-decoration: none;
+    }
+    a.contact-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Krayxce</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" data-aos="fade-up">
+  <h2>Build. Automate. Dominate.</h2>
+  <p>Premium websites and smart automation tools — crafted for creators, brands, and startups who want to grow fast.</p>
+  <a href="#contact" class="button">Get Started</a>
+</section>
+
+<section id="services" data-aos="fade-up">
+  <h3 class="section-title">What We Do</h3>
+  <div class="cards">
+    <div class="card" data-aos="zoom-in">
+      <h4>Custom Website Design</h4>
+      <p>Blazing fast, stunning, responsive websites that turn visitors into clients.</p>
+    </div>
+    <div class="card" data-aos="zoom-in" data-aos-delay="100">
+      <h4>AI Automations</h4>
+      <p>Integrate GPT tools, automate your backend, and scale your operations.</p>
+    </div>
+    <div class="card" data-aos="zoom-in" data-aos-delay="200">
+      <h4>Digital Growth Strategy</h4>
+      <p>We help you dominate online — SEO, email funnels, branding, and analytics.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact" data-aos="fade-up">
+  <h3 class="section-title">Contact</h3>
+  <p>Email: <a class="contact-link" href="mailto:enzoansh707@gmail.com">enzoansh707@gmail.com</a></p>
+  <p>Instagram: <a class="contact-link" href="https://instagram.com/krayxce" target="_blank">@krayxce</a></p>
+</section>
+
+<footer>&copy; 2025 Krayxce. Crafted with vision and code.</footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({ once: true });</script>
+</body>
+</html>
